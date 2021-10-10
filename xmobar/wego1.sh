@@ -1,0 +1,2 @@
+wego
+read -p ""

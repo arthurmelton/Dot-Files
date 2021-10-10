@@ -1,0 +1,19 @@
+#!/bin/sh
+GPU="$(nvidia-smi | sed -n '10{p;q}' | awk '{print $3}' | cut -c1-2)"
+CPU="$(cat /sys/class/thermal/thermal_zone*/temp | cut -c1-2)"
+icon=""
+if [ $GPU -gt 75 ]; then
+    icon=""
+elif [ 40 -gt $GPU ]; then
+    icon=""
+else
+    icon=""
+fi
+if [ $CPU -gt 50 ]; then
+    icon1=""
+elif [ 30 -gt $CPU ]; then
+    icon1=""
+else 
+    icon1=""
+fi
+printf "CPU: %s%s°C GPU: %s%s°C" "$icon1" "$CPU" "$icon" "$GPU"

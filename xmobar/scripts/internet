@@ -1,0 +1,25 @@
+#!/bin/bash
+
+wifistatus="$(cat /sys/class/net/w*/operstate)"
+ethstatus="$(cat /sys/class/net/enp8s0/operstate)"
+time="$(ping -w 1 64.191.93.206 | sed -n '2{p;q}' | awk '{print $7}' | cut -d '=' -f2)"
+if [ $wifistatus = "up" ]; then 
+    essid="$(nmcli c | sed -n '2{p;q}' | awk '{print $1}')"
+    quality="$(cat /proc/net/wireless |  sed -n '3{p;q}' | awk '{printf "%.0f\n",$3}') "
+    icon=""
+elif [ $ethstatus = "up" ]; then
+    essid="$(nmcli c | sed -n '2{p;q}' | awk '{print $5}')"
+    quality=""
+    icon=""
+elif [ -d /sys/class/net/enp8s0 ]; then
+    essid="$(nmcli c | sed -n '2{p;q}' | awk '{print $5}')"
+    quality=""
+    icon=""
+else
+    essid="Disconnected"
+    quality=""
+    icon=""
+fi
+printf "%s %s %s(%s ms)" "$icon" "$essid" "$quality" "$time"
+
+	

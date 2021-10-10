@@ -1,0 +1,4 @@
+#! /bin/bash
+temp="$(curl -s 'http://api.openweathermap.org/data/2.5/weather?zip=30004&units=imperial&appid=79bd766023c13f28b892a9dbce75f4c7' | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'$1'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${2}p | sed -n '16{p;q}')"
+printf "%s°F" "$temp"
+
