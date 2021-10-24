@@ -93,7 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask    ,  xK_m                    ), spawn myMusicplayer)
     , ((modm                  ,  xK_r                    ), spawn myRssreader)
     , ((modm                  ,  xK_e                    ), spawn myIDE)
-    , ((modm                  ,  xK_space                ), spawn("dmenu_run"))
+    , ((modm                  ,  xK_space                ), spawn("rofi -show run"))
     , ((modm                  ,  xK_x                    ), spawn("~/.config/xmenu/xmenu.sh"))
 
        -- kill compile exit lock
