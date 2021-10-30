@@ -218,9 +218,9 @@ draw_bold_text_with_bright_colors: true
 
 colors:
   # Default colors
-  primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+  #primary:
+    #  background: '0x282a36'
+      #  foreground: '0xf8f8f2'
 
     # Bright and dim foreground colors
     #
@@ -248,40 +248,40 @@ colors:
     background: '0x44475a'
 
   # Normal colors
-  normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+  #normal:
+  #  black:   '0x000000'
+  #  red:     '0xff5555'
+  #  green:   '0x50fa7b'
+  #  yellow:  '0xf1fa8c'
+  #  blue:    '0xbd93f9'
+  #  magenta: '0xff79c6'
+  #  cyan:    '0x8be9fd'
+  #  white:   '0xbfbfbf'
 
   # Bright colors
-  bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
+  #bright:
+  #  black:   '0x4d4d4d'
+  #  red:     '0xff6e67'
+  #  green:   '0x5af78e'
+  #  yellow:  '0xf4f99d'
+  #  blue:    '0xcaa9fa'
+  #  magenta: '0xff92d0'
+  #  cyan:    '0x9aedfe'
+  #  white:   '0xe6e6e6'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
-    magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
+  #  dim:
+  #  black:   '0x14151b'
+  #  red:     '0xff2222'
+  #  green:   '0x1ef956'
+  #  yellow:  '0xebf85b'
+  #  blue:    '0x4d5b86'
+  #  magenta: '0xff46b0'
+  #  cyan:    '0x59dffc'
+  #  white:   '0xe6e6d1'
 
   # Indexed Colors
   #
@@ -291,7 +291,7 @@ colors:
   # Example:
   #   `- { index: 16, color: '0xff00ff' }`
   #
-  indexed_colors: []
+  #  indexed_colors: []
 
 # Visual Bell
 #
@@ -584,29 +584,29 @@ key_bindings:
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
 
 # BEGIN ACE
-colors:
-  primary:
-    background: '#060B14'
-    foreground: '#c7a195'
-  cursor:
-    text:       '#060B14'
-    cursor:     '#c7a195'
-  normal:
-    black:      '#060B14'
-    red:        '#704C34'
-    green:      '#7F603F'
-    yellow:     '#2D3643'
-    blue:       '#3D4141'
-    magenta:    '#5A4F47'
-    cyan:       '#8C5333'
-    white:      '#c7a195'
-  bright:
-    black:      '#8b7068'
-    red:        '#704C34'
-    green:      '#7F603F'
-    yellow:     '#2D3643'
-    blue:       '#3D4141'
-    magenta:    '#5A4F47'
-    cyan:       '#8C5333'
-    white:      '#c7a195'
-# END ACE
+#colors:
+#  primary:
+#    background: '#060B14'
+#    foreground: '#c7a195'
+#  cursor:
+#    text:       '#060B14'
+#    cursor:     '#c7a195'
+#  normal:
+#    black:      '#060B14'
+#    red:        '#704C34'
+#    green:      '#7F603F'
+#    yellow:     '#2D3643'
+#    blue:       '#3D4141'
+#    magenta:    '#5A4F47'
+#    cyan:       '#8C5333'
+#    white:      '#c7a195'
+#  bright:
+#    black:      '#8b7068'
+#    red:        '#704C34'
+#    green:      '#7F603F'
+#    yellow:     '#2D3643'
+#    blue:       '#3D4141'
+#    magenta:    '#5A4F47'
+#    cyan:       '#8C5333'
+#    white:      '#c7a195'
+## END ACE
